@@ -7,7 +7,7 @@ import { HeartHandshake, ShieldCheck, Users } from 'lucide-react'
 export default function CaregiverPage() {
   return (
     <main
-      className="max-w-6xl mx-auto px-4 md:px-6 py-28"
+      className="max-w-6xl mx-auto px-4 md:px-6 py-30"
       style={{ fontFamily: 'var(--font-sf-pro)' }}
     >
       {/* Hero Section */}
