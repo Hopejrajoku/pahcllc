@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/NavBar";
+import Footer from "@/components/Footer";
+import ContactMarquee from "@/components/components/ContactMarquee";
 
 const sfPro = localFont({
   src: [
@@ -32,8 +35,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={sfPro.variable}>
-      <body className="antialiased font-sf"> {/* 👈 custom Tailwind font class */}
-        {children}
+      <body className="antialiased font-sf">
+        <ContactMarquee />
+        <Navbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
