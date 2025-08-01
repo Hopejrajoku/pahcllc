@@ -1,20 +1,20 @@
-"use client";
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { motion } from "framer-motion";
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { label: "HOME", href: "/" },
-    { label: "ABOUT US", href: "#about" },
-    { label: "FAQ", href: "#faq" },
-    { label: "SERVICES", href: "#services" },
-    { label: "OUR BLOG", href: "#blog" },
-    { label: "CONTACT US", href: "#contact" },
-    { label: "CAREGIVERS", href: "#caregivers" },
+    { label: 'HOME', href: '/' },
+    { label: 'ABOUT US', href: '/about' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'SERVICES', href: '/services' },
+    { label: 'CONTACT US', href: '/contact' },
+    { label: 'CAREGIVERS', href: '/caregiver' },
   ];
 
   function HamburgerToggle({ isOpen, toggle }) {
@@ -46,22 +46,14 @@ export default function Navbar() {
 
   return (
     <header
-      className="bg-white fixed top-0 w-full z-50 shadow-sm"
+      className="bg-white fixed top-10 w-full z-50 shadow-sm"
       role="banner"
-      style={{ fontFamily: "var(--font-sf-pro)" }}
+      style={{ fontFamily: 'var(--font-sf-pro)' }}
     >
-      <div
-        className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
-        role="navigation"
-        aria-label="Main navigation"
-      >
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center" role="navigation" aria-label="Main navigation">
         {/* Logo + Brand Name */}
         <div className="flex items-center space-x-2">
-          <Link
-            href="/"
-            aria-label="SRP Homecare homepage"
-            className="flex-shrink-0"
-          >
+          <Link href="/" aria-label="SRP Homecare homepage" className="flex-shrink-0">
             <Image
               src="/loogo.jfif"
               alt="SRP Homecare Logo"
@@ -76,7 +68,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden lg:flex space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.label}
@@ -89,31 +81,37 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Fancy Toggle Button */}
-        <div className="md:hidden">
+        {/* Hamburger */}
+        <div className="lg:hidden">
           <HamburgerToggle isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
-      {isOpen && (
-        <nav
-          className="md:hidden bg-white shadow-md px-4 py-6 flex flex-col items-center space-y-4"
-          aria-label="Mobile navigation"
-        >
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-[#083b66] font-medium text-lg hover:text-blue-600 hover:underline underline-offset-4 transition-all duration-200"
-              onClick={() => setIsOpen(false)}
-              aria-label={link.label}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      )}
+      {/* Mobile Nav Dropdown */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-white shadow-md px-4 py-6 flex flex-col items-center space-y-4 z-40"
+            aria-label="Mobile navigation"
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-[#083b66] font-medium text-lg w-full text-center hover:text-blue-600 hover:underline underline-offset-4 transition-all duration-200"
+                onClick={() => setIsOpen(false)}
+                aria-label={link.label}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
