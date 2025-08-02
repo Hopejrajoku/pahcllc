@@ -1,5 +1,5 @@
+import AdvertMarquee from "@/components/AdvertMarquee";
 import ContactMarquee from "@/components/components/ContactMarquee";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/NavBar";
 import ReviewPage from "@/components/Review";
@@ -12,6 +12,7 @@ export default function Home() {
       <Navbar />
       <ContactMarquee />
       <Hero />
+      <AdvertMarquee />
       <ReviewPage />
       <WhoWeArePage />
     </div>

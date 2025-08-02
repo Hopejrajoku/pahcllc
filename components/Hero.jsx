@@ -14,7 +14,7 @@ export default function HeroSection() {
         {/* Image Box with top margin */}
         <div className="relative w-full md:w-[60%] h-[400px] md:h-[500px]">
           <Image
-            src="/her01.jfif"
+            src="/her01.jpeg"
             alt="Caregiver helping elderly woman"
             fill
             className="object-cover grayscale brightness-100"
