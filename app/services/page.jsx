@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 
 export default function ServicesPage() {
@@ -36,35 +38,46 @@ export default function ServicesPage() {
 
   return (
     <section
-      className="max-w-6xl mx-auto py-30 px-4 md:px-6"
+      className="relative w-full text-white py-12"
       style={{ fontFamily: "var(--font-sf-pro)" }}
     >
-      {/* Header image */}
-      <div className="relative w-full h-64 md:h-96 mb-10 rounded-xl overflow-hidden shadow-md">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
         <Image
-          src="/hero.jpg" // ⬅️ Place your image in /public and use actual path
+          src="/services.jpeg"
           alt="Our Services"
           fill
-          className="object-cover grayscale"
+          className="object-cover"
           priority
         />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#001f5f]/3\20 backdrop-brightness-50"></div>
       </div>
 
-      {/* Heading */}
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-[#083b66]">
-        Our Services
-      </h1>
+      {/* Foreground content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 py-32">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-10">
+          Our In-Home Care Services
+        </h1>
+        <p className="text-lg text-center max-w-3xl mx-auto mb-16 text-gray-300">
+          We offer a wide range of personalized services designed to support
+          your loved ones with dignity, comfort, and compassion in the place
+          they feel most at ease—home.
+        </p>
 
-      {/* Services grid */}
-      <div className="grid md:grid-cols-2 gap-8">
-        {services.map((service, index) => (
-          <div key={index} className="border-b pb-4">
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              {service.title}
-            </h2>
-            <p className="text-gray-600">{service.description}</p>
-          </div>
-        ))}
+        <div className="grid md:grid-cols-2 gap-10">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white/10 p-6 rounded-lg shadow-md backdrop-blur border border-white/20"
+            >
+              <h2 className="text-2xl font-semibold mb-2 text-white">
+                {service.title}
+              </h2>
+              <p className="text-gray-200">{service.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
