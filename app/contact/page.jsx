@@ -56,7 +56,7 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-2">Contact Us</h1>
-          <p className="max-w-2xl text-lg text-gray-300">
+          <p className="max-w-2xl text-lg text-gray-100">
             Have a question, need assistance, or want to share feedback? Please fill out the form below, and our team will get back to you promptly.
           </p>
         </div>
