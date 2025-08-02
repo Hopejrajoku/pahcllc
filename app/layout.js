@@ -27,9 +27,9 @@ const sfPro = localFont({
 });
 
 export const metadata = {
-  title: "SRP Homecare – Compassionate In-Home Care Services",
+  title: "Peaceful At Home LLC",
   description:
-    "SRP Homecare provides trusted, personalized, and compassionate in-home care services.",
+    "We Care, We Bring Peace, We Listen. Your trusted partner in compassionate in-home care.",
 };
 
 export default function RootLayout({ children }) {
