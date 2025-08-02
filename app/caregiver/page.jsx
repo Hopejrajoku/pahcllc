@@ -7,7 +7,7 @@ import { HeartHandshake, ShieldCheck, Users } from 'lucide-react'
 export default function CaregiverPage() {
   return (
     <main
-      className="font-sans py-10"
+      className="font-sans py-28"
       style={{ fontFamily: 'var(--font-sf-pro)' }}
     >
       {/* Background Image Section */}
@@ -23,7 +23,7 @@ export default function CaregiverPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Compassionate Caregivers
           </h1>
-          <p className="max-w-5xl text-lg text-white/90">
+          <p className="max-w-4xl text-lg text-white/90">
             Our dedicated team of professional caregivers is committed to delivering dependable, compassionate, and personalized in-home care tailored to meet the unique needs of each individual. With a deep understanding of the importance of dignity, comfort, and emotional well-being, we strive to create a nurturing environment that allows your loved ones to age gracefully and independently in the comfort of their own home. Whether you require daily assistance, companionship, or specialized support, we are here to provide peace of mind and help your family thrive—every step of the way.
           </p>
         </div>

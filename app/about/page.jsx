@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <section
-      className="relative w-full text-white"
+      className="relative w-full text-white py-30"
       style={{ fontFamily: 'var(--font-sf-pro)' }}
     >
       {/* Background Image */}
@@ -17,7 +17,7 @@ export default function AboutPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[#001f5f]/10 backdrop-brightness-70"></div>
+        <div className="absolute inset-0 bg-[#001f5f]/30 backdrop-brightness-70"></div>
       </div>
 
       {/* Foreground Content */}

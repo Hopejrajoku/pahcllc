@@ -34,7 +34,7 @@ export default function ContactMarquee() {
         <Phone size={18} /> +1 (706) 691-3959
       </span>
       <span className="flex items-center gap-2 mx-8">
-        <Mail size={18} /> info@peacefulathome.com
+        <Mail size={18} /> peacefulathomellc@gmail.com
       </span>
     </>
   )
