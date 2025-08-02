@@ -1,82 +1,70 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 
 const reviews = [
   {
     name: "Sarah Thompson",
-    photo: "/reviews/sarah.jpg",
     review: "Absolutely amazing care. Peaceful At Home has changed my mom's life.",
-    location: "Atlanta, GA",
+    location: "Atlanta, Georgia, USA",
   },
   {
     name: "James Carter",
-    photo: "/reviews/james.jpg",
     review: "Professional, compassionate, and always on time. Highly recommend.",
-    location: "Houston, TX",
+    location: "Savannah, Georgia, USA",
   },
   {
     name: "Emily Johnson",
-    photo: "/reviews/emily.jpg",
     review: "We felt peace of mind knowing our dad was in good hands.",
-    location: "Newark, NJ",
+    location: "Augusta, Georgia, USA",
   },
   {
     name: "Michael Lee",
-    photo: "/reviews/michael.jpg",
     review: "Exceptional support and personal attention to every detail.",
-    location: "Phoenix, AZ",
+    location: "Columbus, Georgia, USA",
   },
   {
     name: "Linda Evans",
-    photo: "/reviews/linda.jpg",
     review: "They go above and beyond to ensure comfort and safety.",
-    location: "Sacramento, CA",
+    location: "Macon, Georgia, USA",
   },
   {
     name: "Daniel Moore",
-    photo: "/reviews/daniel.jpg",
     review: "Reliable and kind caregivers—what else can you ask for?",
-    location: "Dallas, TX",
+    location: "Roswell, Georgia, USA",
   },
   {
     name: "Jessica Adams",
-    photo: "/reviews/jessica.jpg",
     review: "Great communication and truly dedicated staff.",
-    location: "Tampa, FL",
+    location: "Alpharetta, Georgia, USA",
   },
   {
     name: "Robert Green",
-    photo: "/reviews/robert.jpg",
     review: "From day one, they treated my mother like family.",
-    location: "Charlotte, NC",
+    location: "Marietta, Georgia, USA",
   },
   {
     name: "Angela White",
-    photo: "/reviews/angela.jpg",
     review: "Couldn't be more satisfied with their services!",
-    location: "Portland, OR",
+    location: "Athens, Georgia, USA",
   },
   {
     name: "Jason Hill",
-    photo: "/reviews/jason.jpg",
     review: "Peaceful At Home lives up to its name. Calm and caring.",
-    location: "Cleveland, OH",
+    location: "Sandy Springs, Georgia, USA",
   },
   {
     name: "Monica Bailey",
-    photo: "/reviews/monica.jpg",
     review: "They work with compassion and professionalism.",
-    location: "Denver, CO",
+    location: "Peachtree City, Georgia, USA",
   },
   {
     name: "Kevin Scott",
-    photo: "/reviews/kevin.jpg",
     review: "Made our caregiving journey so much easier.",
-    location: "Chicago, IL",
+    location: "Johns Creek, Georgia, USA",
   },
 ]
+
 
 export default function ReviewPage() {
   const [index, setIndex] = useState(0)
@@ -105,15 +93,6 @@ export default function ReviewPage() {
         {current && (
           <div className="relative">
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center gap-4">
-              <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-[#083b66]">
-                <Image
-                  src={current.photo}
-                  alt={`Photo of ${current.name}`}
-                  width={96}
-                  height={96}
-                  className="object-cover"
-                />
-              </div>
               <p className="text-lg italic text-gray-700">"{current.review}"</p>
               <p className="text-[#083b66] font-semibold">
                 – {current.name}, <span className="text-gray-500">{current.location}</span>

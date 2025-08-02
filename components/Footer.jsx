@@ -39,7 +39,7 @@ export default function Footer() {
               <Phone size={16} /> +1 (706) 691-3959
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} /> info@peacefulathome.com
+              <Mail size={16} /> peacefulathomellc@gmail.com
             </li>
             <li className="flex items-center gap-2">
               <MapPin size={16} /> Georgia, USA
