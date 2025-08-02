@@ -14,17 +14,17 @@ export default function HeroSection() {
         {/* Image Box with top margin */}
         <div className="relative w-full md:w-[60%] h-[400px] md:h-[500px]">
           <Image
-            src="/hero.jpg"
+            src="/her01.jfif"
             alt="Caregiver helping elderly woman"
             fill
-            className="object-cover grayscale"
+            className="object-cover saturation-50 brightness-100"
             priority
           />
         </div>
 
         {/* Content Overlapping Right Side */}
         <div className="w-full md:w-[45%] -mt-14 md:mt-0 md:-ml-32 bg-[#F2F5FF] p-8 shadow-lg z-10 relative right-0 top-6 md:top-0">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#111827] mb-6 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#083b66] mb-6 leading-tight">
             Peaceful At Home <br /> LLC
           </h1>
           <p className="text-lg text-gray-600 mb-6">

@@ -19,7 +19,7 @@ export default function WhoWeArePage() {
         </div>
         <div className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden">
           <Image
-            src="/hero.jpg"
+            src="/who.jpeg"
             alt="Our compassionate caregiving team"
             fill
             className="object-cover rounded-lg shadow-lg"
