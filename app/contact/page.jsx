@@ -1,8 +1,8 @@
 'use client';
 
 import Image from "next/image";
-import { MapPin } from 'lucide-react';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -12,6 +12,7 @@ export default function ContactPage() {
   });
 
   const [status, setStatus] = useState('');
+  const [showPopper, setShowPopper] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -23,10 +24,23 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('Sending...');
-    setTimeout(() => {
-      setStatus('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
-    }, 1500);
+
+    emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      formData,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    )
+      .then(() => {
+        setStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+        setShowPopper(true);
+        setTimeout(() => setShowPopper(false), 3000);
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        setStatus('Failed to send message. Please try again later.');
+      });
   };
 
   return (
@@ -47,6 +61,11 @@ export default function ContactPage() {
           </p>
         </div>
       </div>
+
+      {/* Confetti Popper (🎉) */}
+      {showPopper && (
+        <div className="fixed top-10 right-10 text-5xl animate-bounce">🎉</div>
+      )}
 
       {/* Content */}
       <div className="max-w-6xl mx-auto px-4 md:px-6 py-8">
@@ -92,16 +111,15 @@ export default function ContactPage() {
             >
               Send Message
             </button>
-            {status && <p className="text-green-600 font-medium">{status}</p>}
+            {status && (
+              <p className={`font-medium ${status.includes('successfully') ? 'text-green-600' : 'text-blue-600'}`}>
+                {status}
+              </p>
+            )}
           </form>
 
           {/* Contact Info */}
           <div className="space-y-8">
-            <div>
-              <h2 className="text-xl font-semibold text-[#083b66] mb-1">Our Location</h2>
-              <p className="text-gray-700"><MapPin size={16} className="inline-block mr-2 text-[#083b66]" />Peaceful At Home LLC</p>
-              <p className="text-gray-700 ml-6">Georgia, USA</p>
-            </div>
             <div>
               <h2 className="text-xl font-semibold text-[#083b66] mb-1">Call Us</h2>
               <p className="text-gray-700 ml-6">+1 (706) 691-3959</p>
