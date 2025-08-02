@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function HeroSection() {
   return (
     <section
-      className="bg-white text-gray-800 py-12 px-4 md:px-8 mt-12"
+      className="bg-white text-gray-800 py-30 px-4 md:px-8 mt-12"
       style={{ fontFamily: 'var(--font-sf-pro)' }}
     >
       <div className="relative flex flex-col md:flex-row items-center justify-center max-w-7xl mx-auto gap-8 mt-8">
@@ -17,7 +17,7 @@ export default function HeroSection() {
             src="/her01.jfif"
             alt="Caregiver helping elderly woman"
             fill
-            className="object-cover saturation-50 brightness-100"
+            className="object-cover grayscale brightness-100"
             priority
           />
         </div>
