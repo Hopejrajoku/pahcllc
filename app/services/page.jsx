@@ -7,6 +7,7 @@ import {
   UserCircle2,
   Home,
   ArrowRightCircle,
+  ThumbsUp,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -21,19 +22,19 @@ const featuredServices = [
     title: "Companion Care",
     slug: "companion-care",
     content:
-      "Our caregivers provide companionship, conversation, and emotional support, helping reduce isolation and loneliness.",
+      "Our companion care service goes beyond simply spending time with your loved one. We focus on building genuine connections that reduce feelings of isolation and promote emotional well-being. Whether it’s playing games, chatting over tea, accompanying clients on walks, or helping with daily routines, our caregivers provide uplifting presence and dependable friendship—because every heart needs company.",
   },
   {
     title: "Personal Care",
     slug: "personal-care",
     content:
-      "We assist with personal hygiene, grooming, bathing, dressing, and mobility, promoting dignity and independence.",
+      "Our respectful and compassionate personal care services support daily activities such as bathing, grooming, dressing, and mobility. We maintain our clients’ dignity and independence by tailoring assistance to individual preferences and comfort levels. Whether temporary recovery or ongoing care is needed, we help our clients look and feel their best while staying safe at home.",
   },
   {
     title: "Dementia Care",
     slug: "dementia-care",
     content:
-      "Our team supports light housekeeping, laundry, meal preparation, and more to keep your home comfortable and clean.",
+      "Dementia care requires patience, understanding, and skill. Our team is trained to support individuals with memory loss, confusion, and cognitive changes. We provide structured routines, gentle communication, and a calm environment to reduce stress and improve quality of life. From reminders to light housekeeping and meal preparation, we create a secure and familiar home for those navigating Alzheimer’s or related conditions.",
   },
 ];
 
@@ -43,7 +44,7 @@ export default function ServicesPage() {
   return (
     <section
       className="relative w-full text-white py-50"
-      style={{ fontFamily: "var(--font-sf-pro)" }}
+      style={{ fontFamily: 'var(--font-sf-pro)' }}
     >
       {/* Background image */}
       <div className="absolute inset-0 z-0">
@@ -63,7 +64,7 @@ export default function ServicesPage() {
           Our In-Home Care Services
         </h1>
         <p className="text-lg text-center max-w-3xl mx-auto mb-16 text-gray-300">
-          We provide a comprehensive range of personalized services to support your loved ones with comfort, compassion, and dignity—right in the comfort of home.
+          Whether your loved one needs a few hours a week or full-time assistance, our team is here to provide consistent, personalized support. At Peaceful At Home LLC, we tailor care plans to each individual’s health, habits, and values.
         </p>
 
         {/* Featured Services Cards */}
@@ -72,17 +73,18 @@ export default function ServicesPage() {
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
+              onClick={() => setSelectedService(service)}
               className="group relative w-full text-left flex flex-col items-start bg-white/10 p-6 rounded-xl shadow-lg backdrop-blur border border-white/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/20 focus:outline-none focus:ring-4 focus:ring-yellow-400 cursor-pointer"
             >
               {icons[service.title]}
-
-              <h2 className="text-[25px] font-bold text-white group-hover:underline">
+              <h2 className="text-[22px] font-bold text-white group-hover:underline">
                 {service.title}
               </h2>
-
+              <p className="mt-2 text-sm text-gray-200 line-clamp-4">
+                {service.content}
+              </p>
               <div className="absolute bottom-6 right-2 flex items-center gap-1">
-                <ArrowRightCircle className="text-white w-8 h-8"
-                 />
+                <ArrowRightCircle className="text-white w-8 h-8" />
                 <span className="w-2 h-2 rounded-full bg-yellow-400 animate-ping" />
               </div>
             </Link>
@@ -97,13 +99,27 @@ export default function ServicesPage() {
           </div>
         )}
 
+        {/* Why Families Trust Us */}
+        <div className="mt-32 max-w-5xl mx-auto px-4 py-16 bg-white/5 backdrop-blur-sm rounded-xl text-center border border-white/10">
+          <div className="flex flex-col items-center justify-center mb-6">
+            <ThumbsUp className="w-12 h-12 text-yellow-300 mb-2" />
+            <h3 className="text-3xl font-bold mb-4">Why Families Choose Us</h3>
+          </div>
+          <p className="text-gray-200 text-lg mb-4">
+            At Peaceful At Home LLC, we understand that inviting a caregiver into your home is an act of trust. That’s why we uphold the highest standards of professionalism, empathy, and accountability. Our clients value our transparency, timely communication, and unwavering commitment to comfort and security.
+          </p>
+          <p className="text-gray-300 text-md">
+            Every plan is crafted with your input, preferences, and goals in mind—because we believe great care begins with listening.
+          </p>
+        </div>
+
         {/* Call to Action */}
-        <div className="max-w-4xl mx-auto mt-40 bg-[#f5f5ff] p-8 rounded-xl text-center shadow px-4">
+        <div className="max-w-4xl mx-auto mt-24 bg-[#f5f5ff] p-8 rounded-xl text-center shadow px-4">
           <h3 className="text-2xl font-bold text-[#083b66] mb-4">
             Ready to get started?
           </h3>
           <p className="text-gray-700 mb-6">
-            Contact us today to schedule a consultation and learn how we can help your family feel safe and supported.
+            Reach out today for a free consultation and discover how our care team can improve your loved one’s quality of life—right from home.
           </p>
           <Link
             href="/contact"

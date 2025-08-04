@@ -45,7 +45,7 @@ export default function ContactPage() {
 
   return (
     <section className="relative" style={{ fontFamily: 'var(--font-sf-pro)' }}>
-      {/* Full-width BG Image Banner */}
+      {/* Banner Image */}
       <div className="relative w-full h-72 md:h-[400px] mt-28">
         <Image
           src="/contact.webp"
@@ -55,22 +55,22 @@ export default function ContactPage() {
           priority
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">Reach Out to Us</h1>
           <p className="max-w-2xl text-lg text-gray-100">
-            Have a question, need assistance, or want to share feedback? Please fill out the form below, and our team will get back to you promptly.
+            We're here to listen, assist, and provide clarity. Whether you're looking for care options, partnership opportunities, or general inquiries — we’re just a message away.
           </p>
         </div>
       </div>
 
-      {/* Confetti Popper (🎉) */}
+      {/* Confetti 🎉 */}
       {showPopper && (
         <div className="fixed top-10 right-10 text-5xl animate-bounce">🎉</div>
       )}
 
-      {/* Content */}
-      <div className="max-w-6xl mx-auto px-4 md:px-6 py-8">
+      {/* Main Contact Section */}
+      <div className="max-w-6xl mx-auto px-4 md:px-6 py-12">
         <div className="grid md:grid-cols-2 gap-12 bg-white/80 p-8 rounded-xl shadow-lg backdrop-blur-sm">
-          {/* Contact Form */}
+          {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block mb-1 font-medium text-[#083b66]">Your Name</label>
@@ -118,7 +118,7 @@ export default function ContactPage() {
             )}
           </form>
 
-          {/* Contact Info */}
+          {/* Info Section */}
           <div className="space-y-8">
             <div>
               <h2 className="text-xl font-semibold text-[#083b66] mb-1">Call Us</h2>
@@ -129,11 +129,27 @@ export default function ContactPage() {
               <p className="text-gray-700 ml-6">peacefulathomellc@gmail.com</p>
             </div>
             <div>
-              <h2 className="text-xl font-semibold text-[#083b66] mb-1">Hours</h2>
+              <h2 className="text-xl font-semibold text-[#083b66] mb-1">Working Hours</h2>
               <p className="text-gray-700 ml-6">Mon–Fri: 9:00 AM – 5:00 PM</p>
               <p className="text-gray-700 ml-6">Sat–Sun: Closed</p>
             </div>
           </div>
+        </div>
+
+        {/* Additional Section: Why Contact Us */}
+        <div className="mt-16 bg-blue-50 p-8 rounded-xl shadow-md">
+          <h2 className="text-2xl font-bold text-[#083b66] mb-4">Why Contact Us?</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Whether you’re considering our in-home care services, looking to explore partnership opportunities, or simply have a question, our team is always available to provide the information you need. We value transparency, compassion, and responsive support — and you can expect nothing less from us.
+          </p>
+        </div>
+
+        {/* Additional Section: Our Promise */}
+        <div className="mt-12 bg-white p-8 rounded-xl shadow-md">
+          <h2 className="text-2xl font-bold text-[#083b66] mb-4">Our Promise to You</h2>
+          <p className="text-gray-700 leading-relaxed">
+            When you reach out, you're not just sending a message — you’re starting a conversation with a team that genuinely cares. We promise timely responses, attentive listening, and a commitment to addressing your needs with the utmost care and professionalism. Let’s build a better tomorrow together.
+          </p>
         </div>
       </div>
     </section>
