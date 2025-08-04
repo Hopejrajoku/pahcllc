@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#4C4CDB] text-white pt-16 pb-10 px-6 md:px-12"
+    <footer className="bg-[#229CDD] text-white pt-16 pb-10 px-6 md:px-12"
       style={{ fontFamily: 'var(--font-sf-pro)' }}>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm">
 
@@ -60,7 +60,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom copyright */}
-      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-400 text-xs">
+      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-300 text-xs">
         &copy; {new Date().getFullYear()} Peaceful At Home LLC. All rights reserved.
       </div>
     </footer>

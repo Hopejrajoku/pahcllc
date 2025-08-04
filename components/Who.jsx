@@ -71,7 +71,7 @@ export default function WhoWeArePage() {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-block bg-[#4C4CDB] hover:bg-[#001f5f] text-white px-6 py-3 rounded transition"
+                  className="inline-block bg-[#229CDD] hover:bg-[#001f5f] text-white px-6 py-3 rounded transition"
                 >
                   Contact Us
                 </Link>

@@ -103,14 +103,14 @@ export default function ReviewPage() {
               <button
                 onClick={prev}
                 aria-label="Previous Review"
-                className="bg-[#4C4CDB] text-white px-4 py-2 rounded"
+                className="bg-[#229CDD] text-white px-4 py-2 rounded"
               >
                 ← Prev
               </button>
               <button
                 onClick={next}
                 aria-label="Next Review"
-                className="bg-[#4C4CDB] text-white px-4 py-2 rounded"
+                className="bg-[#229CDD] text-white px-4 py-2 rounded"
               >
                 Next →
               </button>

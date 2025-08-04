@@ -41,7 +41,7 @@ export default function ContactMarquee() {
 
   return (
     <div
-      className="w-full overflow-hidden bg-[#4C4CDB] text-white py-5 fixed top-0 z-50"
+      className="w-full overflow-hidden bg-[#229CDD] text-white py-5 fixed top-0 z-50"
       style={{ fontFamily: 'var(--font-sf-pro)' }}
     >
       <div className="relative w-full h-full">

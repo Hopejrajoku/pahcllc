@@ -38,7 +38,7 @@ export default function HeroSection() {
           </ul>
           <Link
             href="/contact"
-            className="inline-block bg-[#4C4CDB] hover:bg-[#003380] text-white font-semibold px-6 py-3 transition duration-200 rounded-lg shadow-md"
+            className="inline-block bg-[#229CDD] hover:bg-[#003380] text-white font-semibold px-6 py-3 transition duration-200 rounded-lg shadow-md"
           >
             Contact Us
           </Link>

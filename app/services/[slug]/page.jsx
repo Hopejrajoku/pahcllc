@@ -3,6 +3,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { use } from 'react'; // ✅ Import React's use()
 
 const services = {
   'companion-care': {
@@ -143,8 +144,9 @@ const services = {
   },
 };
 
-export default function ServiceDetailPage({ params }) {
-  const { slug } = params;
+export default function ServiceDetailPage(paramsPromise) {
+  // ✅ Unwrap `params` using `use()` as required
+  const { slug } = use(paramsPromise.params);
   const service = services[slug];
 
   if (!service) {
@@ -184,7 +186,7 @@ export default function ServiceDetailPage({ params }) {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#4C4CDB] hover:bg-[#001f5f] text-white px-6 py-3 rounded transition"
+            className="inline-block bg-[#229CDD] hover:bg-[#001f5f] text-white px-6 py-3 rounded transition"
           >
             Contact Us
           </Link>

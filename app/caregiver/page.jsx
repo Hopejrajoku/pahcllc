@@ -92,7 +92,7 @@ export default function CaregiverPage() {
         <div className="flex justify-center">
           <Link
             href="/services"
-            className="bg-[#4C4CDB] hover:bg-[#001f5f] text-white px-6 py-3 rounded transition"
+            className="bg-[#229CDD] hover:bg-[#001f5f] text-white px-6 py-3 rounded transition"
           >
             Explore Our Services
           </Link>
@@ -109,7 +109,7 @@ export default function CaregiverPage() {
         </p>
         <Link
           href="/contact"
-          className="inline-block bg-[#4C4CDB] hover:bg-[#001f5f] text-white px-6 py-3 rounded transition"
+          className="inline-block bg-[#229CDD] hover:bg-[#001f5f] text-white px-6 py-3 rounded transition"
         >
           Contact Us
         </Link>
