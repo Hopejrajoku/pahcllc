@@ -48,7 +48,7 @@ const services = {
           </ul>
 
           <p>
-            Peaceful At Home LLC is proud to offer trusted companion care services to those in the Augusta area and across the CSRA.
+            Peaceful At Home LLC is proud to offer trusted companion care services to those in the Georgia.
             Contact us today to discover how we can support your loved one while helping them stay confident in their own home.
           </p>
         </div>
@@ -73,14 +73,14 @@ const services = {
         <div>
           <h2 className="text-2xl font-semibold mb-4">Why Use Our Personal Care Service</h2>
           <p className="mb-4">
-            At Savannah River ProHome Care, we pride ourselves on providing our patients with the best in-home care and senior care in the Augusta area.
+            Peaceful At Home LLC, we pride ourselves on providing our patients with the best in-home care and senior care in the Georgia.
             If you or someone you love could benefit from personalized care in the comfort of their own home, give us a call.
           </p>
 
           <h3 className="text-xl font-semibold mb-2">Maintain your Dignity with our personal care services</h3>
           <p className="mb-4">
             Our team of specially trained professionals offer peace of mind as well as assistance with personal care.
-            Savannah River ProHome Care allows patients to maintain their dignity and independence while providing peace of mind and comfort.
+            Peaceful At Home LLC allows patients to maintain their dignity and independence while providing peace of mind and comfort.
           </p>
 
           <h3 className="text-xl font-semibold mb-2">Personal Care Services:</h3>
@@ -93,7 +93,7 @@ const services = {
           </ul>
 
           <p>
-            If you or someone you love is in need of personal in-home care, contact the professional caregivers at Savannah River ProHome Care to learn more about how we can help provide peace of mind for you and your family.
+            If you or someone you love is in need of personal in-home care, contact the professional caregivers at Peaceful At Home LLC to learn more about how we can help provide peace of mind for you and your family.
           </p>
         </div>
       </div>
@@ -118,7 +118,7 @@ const services = {
           <h2 className="text-2xl font-semibold mb-4">Personalized, In-Home Dementia Care</h2>
           <p className="mb-4">
             For patients living with dementia or Alzheimer’s, staying at home in a familiar setting provides comfort and stability.
-            Savannah River ProHome Care offers a compassionate, engaging approach to dementia care focused on safety, routine, and emotional support.
+            Peaceful At Home LLC offers a compassionate, engaging approach to dementia care focused on safety, routine, and emotional support.
           </p>
 
           <p className="mb-4">
@@ -135,7 +135,7 @@ const services = {
           </ul>
 
           <p>
-            Caring for a loved one with dementia can be emotionally draining. Let us be your support system. Contact Peaceful At Home LLC today to learn more about our specialized dementia and Alzheimer’s care services across Augusta and the CSRA.
+            Caring for a loved one with dementia can be emotionally draining. Let us be your support system. Contact Peaceful At Home LLC today to learn more about our specialized dementia and Alzheimer’s care services across Georgia.
           </p>
         </div>
       </div>
