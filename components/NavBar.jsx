@@ -55,15 +55,15 @@ export default function Navbar() {
         <div className="flex items-center space-x-2">
           <Link href="/" aria-label="Peaceful At Home LLC" className="flex-shrink-0">
             <Image
-              src="/loogo.jfif"
+              src="/Logo.png"
               alt="Peaceful At Home LLC Logo"
               width={150}
               height={80}
               className="h-10 w-auto"
             />
           </Link>
-          <span className="hidden sm:inline-block text-[#083b66] font-semibold text-lg">
-            Peaceful At Home
+          <span className=" sm:inline-block text-[#083b66] font-semibold text-lg">
+            P.A.H LLC
           </span>
         </div>
 
