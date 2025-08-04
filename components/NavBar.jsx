@@ -55,7 +55,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-2">
           <Link href="/" aria-label="Peaceful At Home LLC" className="flex-shrink-0">
             <Image
-              src="/Logo.png"
+              src="/logonav.png"
               alt="Peaceful At Home LLC Logo"
               width={150}
               height={80}
