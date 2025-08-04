@@ -62,8 +62,8 @@ export default function Navbar() {
               className="h-10 w-auto"
             />
           </Link>
-          <span className=" sm:inline-block text-[#083b66] font-semibold text-lg">
-            PECEFUL AT HOME LLC
+          <span className="hidden sm:inline-block text-[#083b66] font-semibold text-lg">
+            PEACEFUL AT HOME LLC
           </span>
         </div>
 
