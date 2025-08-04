@@ -63,7 +63,7 @@ export default function Navbar() {
             />
           </Link>
           <span className=" sm:inline-block text-[#083b66] font-semibold text-lg">
-            P.A.H LLC
+            PECEFUL AT HOME LLC
           </span>
         </div>
 
