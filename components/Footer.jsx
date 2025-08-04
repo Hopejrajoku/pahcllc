@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Logo and Description */}
         <div>
           <div className="flex items-center gap-2 mb-4 ">
-            <Image src="/Logo.png" alt="Peaceful At Home LLC" width={40} height={40} className='bg-gray-100 rounded-full' />
+            <Image src="/logonav.png" alt="Peaceful At Home LLC" width={40} height={40} className='bg-gray-100 rounded-full' />
           </div>
           <p className="text-gray-300">
             Providing compassionate care and a sense of security to every home we serve.
