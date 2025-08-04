@@ -9,6 +9,16 @@ const services = {
     title: 'Companion Care',
     content: (
       <div className="grid md:grid-cols-2 gap-10 items-center text-left text-gray-200">
+        {/* Image Left */}
+        <div className="w-full h-[500px] relative rounded-xl overflow-hidden shadow-lg">
+          <Image
+            src="/compar.jpg"
+            alt="Companion Care"
+            fill
+            className="object-cover grayscale"
+          />
+        </div>
+
         <div>
           <h2 className="text-2xl font-semibold mb-4">Comprehensive, Compassionate In-Home Care</h2>
           <p className="mb-4">
@@ -42,14 +52,6 @@ const services = {
             Contact us today to discover how we can support your loved one while helping them stay confident in their own home.
           </p>
         </div>
-        <div className="w-full h-[500px] relative rounded-xl overflow-hidden shadow-lg">
-          <Image
-            src="/images/companion-care.jpg"
-            alt="Companion Care"
-            fill
-            className="object-cover"
-          />
-        </div>
       </div>
     ),
   },
@@ -58,6 +60,16 @@ const services = {
     title: 'Personal Care',
     content: (
       <div className="grid md:grid-cols-2 gap-10 items-center text-left text-gray-200">
+        {/* Image Left */}
+        <div className="w-full h-[300px] relative rounded-xl overflow-hidden shadow-lg">
+          <Image
+            src="/personal.jpg"
+            alt="Personal Care"
+            fill
+            className="object-cover grayscale"
+          />
+        </div>
+
         <div>
           <h2 className="text-2xl font-semibold mb-4">Why Use Our Personal Care Service</h2>
           <p className="mb-4">
@@ -84,14 +96,6 @@ const services = {
             If you or someone you love is in need of personal in-home care, contact the professional caregivers at Savannah River ProHome Care to learn more about how we can help provide peace of mind for you and your family.
           </p>
         </div>
-        <div className="w-full h-[300px] relative rounded-xl overflow-hidden shadow-lg">
-          <Image
-            src="/personal.jpg"
-            alt="Personal Care"
-            fill
-            className="object-cover grayscale"
-          />
-        </div>
       </div>
     ),
   },
@@ -100,6 +104,16 @@ const services = {
     title: 'Dementia Care',
     content: (
       <div className="grid md:grid-cols-2 gap-10 items-center text-left text-gray-200">
+        {/* Image Left */}
+        <div className="w-full h-[300px] relative rounded-xl overflow-hidden">
+          <Image
+            src="/demen.jpg"
+            alt="Dementia Care"
+            fill
+            className="object-cover grayscale"
+          />
+        </div>
+
         <div>
           <h2 className="text-2xl font-semibold mb-4">Personalized, In-Home Dementia Care</h2>
           <p className="mb-4">
@@ -124,14 +138,6 @@ const services = {
             Caring for a loved one with dementia can be emotionally draining. Let us be your support system. Contact Peaceful At Home LLC today to learn more about our specialized dementia and Alzheimer’s care services across Augusta and the CSRA.
           </p>
         </div>
-        <div className="w-full h-[300px] relative rounded-xl overflow-hidden">
-          <Image
-            src="/dementia.jpg"
-            alt="Dementia Care"
-            fill
-            className="object-cover grayscale"
-          />
-        </div>
       </div>
     ),
   },
@@ -146,8 +152,10 @@ export default function ServiceDetailPage({ params }) {
   }
 
   return (
-    <section className="relative w-full text-white py-40 min-h-screen"
-      style={{ fontFamily: 'var(--font-sf-pro)' }}>
+    <section
+      className="relative w-full text-white py-40 min-h-screen"
+      style={{ fontFamily: 'var(--font-sf-pro)' }}
+    >
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -161,7 +169,9 @@ export default function ServiceDetailPage({ params }) {
 
       {/* Foreground */}
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <h1 className="text-4xl md:text-5xl font-bold mb-10 text-center">{service.title}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-10 text-center">
+          {service.title}
+        </h1>
         <div className="text-lg">{service.content}</div>
 
         {/* Call to Action */}
