@@ -28,7 +28,7 @@ export default function HeroSection() {
             Peaceful At Home <br /> LLC
           </h1>
           <p className="text-lg text-gray-600 mb-6">
-            Listening with intention, so you feel understood.
+            We care, we bring peace to you.
           </p>
           <ul className="space-y-2 text-gray-700 text-base mb-6">
             <li>• Your Home</li>

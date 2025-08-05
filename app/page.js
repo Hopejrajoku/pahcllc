@@ -2,7 +2,7 @@ import AdvertMarquee from "@/components/AdvertMarquee";
 import ContactMarquee from "@/components/components/ContactMarquee";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/NavBar";
-import ReviewPage from "@/components/Review";
+//import ReviewPage from "@/components/Review";
 import WhoWeArePage from "@/components/Who";
 import Image from "next/image";
 
@@ -13,7 +13,6 @@ export default function Home() {
       <ContactMarquee />
       <Hero />
       <AdvertMarquee />
-      <ReviewPage />
       <WhoWeArePage />
     </div>
   );
