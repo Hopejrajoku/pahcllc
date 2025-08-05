@@ -1,6 +1,7 @@
 import AdvertMarquee from "@/components/AdvertMarquee";
 import ContactMarquee from "@/components/components/ContactMarquee";
 import Hero from "@/components/Hero";
+import JobApplicationSection from "@/components/job";
 import Navbar from "@/components/NavBar";
 //import ReviewPage from "@/components/Review";
 import WhoWeArePage from "@/components/Who";
@@ -13,6 +14,7 @@ export default function Home() {
       <ContactMarquee />
       <Hero />
       <AdvertMarquee />
+      <JobApplicationSection />
       <WhoWeArePage />
     </div>
   );

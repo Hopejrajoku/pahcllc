@@ -43,7 +43,7 @@ export default function Footer() {
               <Mail size={16} /> peacefulathomellc@gmail.com
             </li>
             <li className="flex items-center gap-2">
-              <MapPin size={16} /> Georgia, USA
+              <MapPin size={16} /> Grovetown, Georgia, USA
             </li>
           </ul>
         </div>

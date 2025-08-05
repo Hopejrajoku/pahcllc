@@ -29,9 +29,9 @@ export default function AdvertMarquee() {
   }, [])
 
   const repeatedContent = (
-    <span className="flex items-center gap-2 mx-8 text-black text-[35px] font-bold ">
+    <span className="flex items-center gap-2 mx-8 text-black text-[28px] md:text-[35px] font-bold">
       <Megaphone size={20} className="text-yellow-500" />
-      WATCH OUT FOR OUR LATEST ADVERT
+      Now Hiring: Certified Nursing Assistants – Apply Today!
     </span>
   )
 
