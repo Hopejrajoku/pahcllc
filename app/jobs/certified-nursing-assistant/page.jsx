@@ -134,7 +134,7 @@ export default function CertifiedNursingAssistantPage() {
         </p>
         <div className="flex justify-center">
           <Link
-            href="/caregivers"
+            href="/caregiver"
             className="bg-[#229CDD] hover:bg-[#001f5f] text-white px-6 py-3 rounded transition"
           >
             See what we offer
