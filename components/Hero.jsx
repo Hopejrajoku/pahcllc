@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export default function HeroSection() {
   return (
@@ -11,8 +12,13 @@ export default function HeroSection() {
     >
       <div className="relative flex flex-col md:flex-row items-center justify-center max-w-7xl mx-auto gap-8 mt-8">
         
-        {/* Image Box with top margin */}
-        <div className="relative w-full md:w-[60%] h-[400px] md:h-[500px]">
+        {/* Animated Image Box */}
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="relative w-full md:w-[60%] h-[400px] md:h-[500px]"
+        >
           <Image
             src="/hero.jpeg"
             alt="Caregiver helping elderly woman"
@@ -20,10 +26,15 @@ export default function HeroSection() {
             className="object-cover grayscale brightness-100"
             priority
           />
-        </div>
+        </motion.div>
 
-        {/* Content Overlapping Right Side */}
-        <div className="w-full md:w-[45%] -mt-14 md:mt-0 md:-ml-32 bg-[#F2F5FF] p-8 shadow-lg z-10 relative right-0 top-6 md:top-0">
+        {/* Animated Content Box */}
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="w-full md:w-[45%] -mt-14 md:mt-0 md:-ml-32 bg-[#F2F5FF] p-8 shadow-lg z-10 relative right-0 top-6 md:top-0"
+        >
           <h1 className="text-3xl md:text-4xl font-bold text-[#083b66] mb-6 leading-tight">
             Peaceful At Home <br /> LLC
           </h1>
@@ -42,7 +53,7 @@ export default function HeroSection() {
           >
             Contact Us
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
